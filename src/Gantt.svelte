@@ -1,9 +1,3 @@
-<!-- <svelte:options
-  customElement={{
-    tag: "svelte-gantt-chart",
-    shadow: "none",
-  }}
-/> -->
 <svelte:options
   customElement={{
     tag: "svelte-gantt-chart",
