@@ -30,11 +30,11 @@ function serve() {
 }
 
 export default {
-	input: 'src/BtnCounter.svelte',
+	input: 'src/Gantt.svelte',
 	output: {
 		sourcemap: true,
 		format: 'umd',
-		name: 'BtnCounter',
+		name: 'Gantt',
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
