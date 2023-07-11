@@ -1,4 +1,15 @@
-<svelte:options tag="svelte-gantt-chart" />
+<!-- <svelte:options
+  customElement={{
+    tag: "svelte-gantt-chart",
+    shadow: "none",
+  }}
+/> -->
+<svelte:options
+  customElement={{
+    tag: "svelte-gantt-chart",
+    shadow: "none",
+  }}
+/>
 
 <script>
   import "./lib/trial-gantt/codebase/dhtmlxgantt.css";
@@ -51,5 +62,5 @@
   });
 </script>
 
-<h2>Gantt.svelte</h2>
+<h2>Gantt.svelte new</h2>
 <div bind:this={container} style="width: 100%; height: 100%;" />
