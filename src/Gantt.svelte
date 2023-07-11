@@ -1,8 +1,10 @@
+<svelte:options tag="svelte-gantt-chart" />
+
 <script>
-    import "./lib/trial-gantt/codebase/dhtmlxgantt.css";
-    import { onMount } from "svelte";
-    import { Gantt } from "@dhx/trial-gantt";
-    
+  import "./lib/trial-gantt/codebase/dhtmlxgantt.css";
+  import { onMount } from "svelte";
+  import { Gantt } from "@dhx/trial-gantt";
+
   const tasks = {
     data: [
       {
@@ -36,17 +38,18 @@
     links: [{ id: 1, source: 1, target: 2, type: "0" }],
   };
 
-    
-    let container;
-    onMount(() => {
-        let gantt = Gantt.getGanttInstance();
-        gantt.init(container);
-        gantt.parse(tasks);
+  let container;
+  onMount(() => {
+    console.log("Gantt has beend mounted");
+    let gantt = Gantt.getGanttInstance();
+    gantt.init(container);
+    gantt.parse(tasks);
 
-        return () => {
-            gantt.destructor();
-        };
-    });
+    return () => {
+      gantt.destructor();
+    };
+  });
 </script>
 
-<div bind:this={container} style="width: 100%; height: 100%;"></div>
+<h2>Gantt.svelte</h2>
+<div bind:this={container} style="width: 100%; height: 100%;" />
